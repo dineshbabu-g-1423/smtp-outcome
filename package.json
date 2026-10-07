@@ -1,0 +1,17 @@
+{
+  "name": "smtp-outcome",
+  "version": "0.1.0",
+  "description": "Classify SMTP responses and DSNs into normalised delivery outcomes, and decide what a sender should do next.",
+  "keywords": ["smtp", "bounce", "dsn", "deliverability", "mta", "email", "deferral"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": { "typescript": "^5.6.0", "@types/node": "^22.0.0" }
+}
